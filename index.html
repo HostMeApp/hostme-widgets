@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/index.css" />
+    <title>Hostme Widgets Demo</title>
+    <script
+      src="https://hostme-webguest-qa.azurewebsites.net/widgets/reservation/hostme-widget-reservation.es.js"
+      type="module"
+      async
+    ></script>
+  </head>
+  <body>
+    <h1 class="site-header">Hostme Widgets Demo</h1>
+    <section class="widgets-wrapper">
+      <div>
+        <h2>Silent mode</h2>
+        <p>Call the widget's inPlace method on click</p>
+        <button type="button" class="example-btn">Button on your site</button>
+      </div>
+      <div>
+        <h2>Button</h2>
+        <hostme-widget-reservation
+          data-hostme-id="6904"
+          data-env-type="qa"
+          data-widget-type="button"
+          data-allow-fast-booking="true"
+        ></hostme-widget-reservation>
+      </div>
+      <div>
+        <h2>Vertical</h2>
+        <hostme-widget-reservation
+          data-hostme-id="6904"
+          data-env-type="qa"
+          data-widget-type="vertical"
+          data-time-select="step"
+          data-allow-fast-booking="true"
+          data-preferred-language="en"
+        ></hostme-widget-reservation>
+      </div>
+      <div>
+        <h2>Horizontal + apdaptive</h2>
+        <sub>(for wide screens)</sub>
+        <hostme-widget-reservation
+          data-hostme-id="6904"
+          data-env-type="qa"
+          data-widget-type="horizontal"
+          data-adaptive-layout="true"
+          data-allow-fast-booking="true"
+          data-preferred-language="en"
+        ></hostme-widget-reservation>
+      </div>
+      <div>
+        <h2>Horizontal</h2>
+        <sub>(for wide screens)</sub>
+        <hostme-widget-reservation
+          data-hostme-id="6904"
+          data-env-type="qa"
+          data-widget-type="horizontal"
+          data-allow-fast-booking="true"
+          data-preferred-language="en"
+        ></hostme-widget-reservation>
+      </div>
+    </section>
+    <script src="click.js"></script>
+  </body>
+</html>
